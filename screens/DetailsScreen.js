@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 
 export default function DetailsScreen({ route }) {
-  const { nombre, edad } = route.params;
+  const { nombre = "Damian", edad = "21 años" } = route.params;
 
   return (
     <View style={{ padding: 20 }}>
