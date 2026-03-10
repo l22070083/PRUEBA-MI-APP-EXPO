@@ -6,15 +6,15 @@ import { View, Text } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>HOLA MUNDO :)</Text>
-      <StatusBar style="auto" />
-
-        <Text>Pantalla principal</Text>
-        <Link href="/about">Ir a About</Link>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
